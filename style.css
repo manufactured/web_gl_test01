@@ -1,0 +1,154 @@
+@import url('https://use.typekit.net/jmk3xov.css');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;400;600&display=swap');
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.646);
+  /* --light-translucent: rgba(211, 211, 211, 0.705); */
+  --light-translucent: rgb(211, 211, 211);
+  --spacing: 300px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  /* max-width: 50%; */
+}
+
+#full-wrapper {
+  width: 960;
+  margin: 0 auto;
+}
+
+main {
+  width: 100vw;
+  color: rgb(211, 211, 211);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 60px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: elevon, sans-serif; */
+  /* font-family: 'MuseoModerno', cursive; */
+  /* color: --light-translucent; */
+  /* color: rgb(211, 211, 211); */
+  color: rgb(172, 174, 202);
+  opacity: 65%;
+  line-height: 85%;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  /* font-family: elevon, sans-serif; */
+  /* color: --light-translucent; */
+  /* background-color: rgba(0, 0, 0, 0.653); */
+  padding: 0.3rem;
+  color: rgb(211, 211, 211);
+  /* color: rgb(102, 0, 128); */
+  font-family: 'MuseoModerno', cursive;
+  opacity: 70%;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h3 {
+  /* font-family: elevon, sans-serif; */
+  /* color: --light-translucent; */
+  /* background-color: rgba(0, 0, 0, 0.653); */
+  padding: 0.3rem;
+  color: rgb(211, 211, 211);
+  /* color: green; */
+  font-family: 'MuseoModerno', cursive;
+  opacity: 70%;
+  font-weight: 700;
+  font-style: normal;
+}
+
+blockquote {
+  /* font-family: elevon, sans-serif; */
+  /* color: --light-translucent; */
+  /* background-color: rgba(0, 0, 0, 0.653); */
+  padding: 0.3rem;
+  color: rgb(211, 211, 211);
+  font-family: 'MuseoModerno', cursive;
+  opacity: 90%;
+  font-weight: 700;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  /* color: red; */
+  margin-bottom: var(--spacing);
+}
+
+blockquote p {
+  /* color: black; */
+
+  /* background-color: rgba(0, 0, 0, 0.653); */
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset white 4px;
+  font-size: 2rem;
+  display: inline;
+  line-height: 1;
+  font-weight: 400;
+  /* color: red; */
+}
+
+.title-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset 2px;
+  padding: 20px;
+  font-size: 1rem;
+  display: inline;
+  line-height: 1;
+  color: rgb(214, 215, 236);
+  opacity: 75%;
+}
+
+header {
+  /* background: var(--dark-bg); */
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset 2px;
+  padding: 20px;
+  font-size: 1rem;
+  display: inline;
+  line-height: 1;
+  color: rgb(211, 211, 211);
+  opacity: 85%;
+}
+
+.left {
+  grid-column: 6 / 12;
+}
