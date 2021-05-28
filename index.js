@@ -73,7 +73,7 @@ function animate() {
   requestAnimationFrame(animate);
 
   torus.rotation.x += 0.001;
-  torus.rotation.y += 0.005;
+  torus.rotation.y += 0.0035;
   torus.rotation.z += 0.001;
 
   controls.update();
@@ -118,7 +118,7 @@ scene.add(mars);
 scene.add(moon);
 
 mars.position.z = 30;
-mars.position.setX(30);
+mars.position.setX(40);
 
 moon.position.z = 9;
 moon.position.setX(-13);
