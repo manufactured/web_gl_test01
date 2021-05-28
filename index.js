@@ -53,7 +53,7 @@ scene.add(pointLight, ambientLight);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.2, 38, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
@@ -72,9 +72,9 @@ scene.background = spaceTexture;
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.006;
-  torus.rotation.y += 0.002;
-  torus.rotation.z += 0.002;
+  torus.rotation.x += 0.001;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.001;
 
   controls.update();
 
@@ -93,16 +93,18 @@ const RM = new THREE.Mesh(
 scene.add(RM);
 
 // Mars/moon
-// const marsTexture = new THREE.TextureLoader().load('./images/mars_1k_color.jpg');
+const marsTexture = new THREE.TextureLoader().load(
+  './images/mars_1k_color.jpg'
+);
 const moonTexture = new THREE.TextureLoader().load('./images/moon.jpg');
 
-// const mars = new THREE.Mesh(
-//   new THREE.SphereGeometry(3, 32, 32),
-//   new THREE.MeshStandardMaterial({
-//     map: marsTexture,
-//     normalMap: normalTexture,
-//   })
-// );
+const mars = new THREE.Mesh(
+  new THREE.SphereGeometry(6, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: marsTexture,
+    normalMap: normalTexture,
+  })
+);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -112,19 +114,20 @@ const moon = new THREE.Mesh(
   })
 );
 
-// scene.add(mars);
+scene.add(mars);
 scene.add(moon);
 
-// mars.position.z = 30;
-// mars.position.setX(-10);
+mars.position.z = 30;
+mars.position.setX(30);
+
 moon.position.z = 9;
-moon.position.setX(-9);
+moon.position.setX(-13);
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  // mars.rotation.x += 0.005;
-  // mars.rotation.y += 0.045;
-  // mars.rotation.z += 0.005;
+  mars.rotation.x += 0.005;
+  mars.rotation.y += 0.045;
+  mars.rotation.z += 0.005;
   moon.rotation.x += 0.005;
   moon.rotation.y += 0.045;
   moon.rotation.z += 0.0;
